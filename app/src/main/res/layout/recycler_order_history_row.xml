@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".fragment.OrderHistoryFragment">
+
+    <LinearLayout
+        android:id="@+id/llOrderHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="5"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/txtResHistoryName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:text="@string/restaurants_name"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins"
+            android:padding="5dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:text="11/12/2022"
+            android:textSize="19sp"
+            android:fontFamily="@font/poppins"
+            android:textAlignment="center"
+            android:padding="5dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerResHistoryItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llOrderHistory"
+        android:padding="5dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        android:layout_below="@id/recyclerResHistoryItems"/>
+
+
+</RelativeLayout>

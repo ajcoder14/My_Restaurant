@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F1E3E3"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="5.2dp">
+
+    <LinearLayout
+        android:id="@+id/mainContent"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:weightSum="6">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+        <TextView
+            android:id="@+id/txtItemNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:layout_centerInParent="true"
+            android:textSize="20sp"
+            android:textColor="#615656"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3.5">
+
+            <TextView
+                android:id="@+id/txtItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/your_manu_list"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_margin="5dp"/>
+
+            <TextView
+                android:id="@+id/txtRs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rs"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_below="@+id/txtItem"
+                android:padding="2dp"
+                android:fontFamily="@font/poppins"
+                android:layout_marginStart="5dp"/>
+
+            <TextView
+                android:id="@+id/txtItemPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_100"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_below="@+id/txtItem"
+                android:layout_alignStart="@+id/txtRs"
+               android:padding="2dp"
+                android:fontFamily="@font/poppins"
+                android:layout_marginStart="20dp"/>
+
+        </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/btnAddToCart"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="2.2"
+                android:background="@color/colorPrimary"
+                android:text="Add"
+                android:visibility="visible"
+                android:textAllCaps="false"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"/>
+            <Button
+                android:id="@+id/btnRemoveFromCart"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_weight="2.2"
+                android:background="#FFC400"
+                android:text="Remove"
+                android:visibility="gone"
+                android:textAllCaps="false"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/white"/>
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

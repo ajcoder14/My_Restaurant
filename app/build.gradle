@@ -1,0 +1,63 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.aniket.myrestaurants'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.aniket.myrestaurants"
+        minSdk 19
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled = true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+//dependencies {
+//}
+
+dependencies {
+    //for build apk 
+    implementation("androidx.multidex:multidex:2.0.1")
+
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    //it is use for Room persistence library
+    def room_version = "2.5.2"
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
+    //it is use for send request to server
+    implementation 'com.android.volley:volley:1.2.1'
+    //picasso library for img lode
+    implementation 'com.squareup.picasso:picasso:2.8'
+    //for gson request
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.android.gms:play-services-cast-framework:21.3.0'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.0.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.LoginActivity"
+    android:background="#F44336">
+
+    <ImageView
+        android:id="@+id/imgRestaurantLogin"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:src="@drawable/login_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+
+    <EditText
+        android:id="@+id/edtPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_your_mobile_no"
+        android:inputType="phone"
+        android:textSize="20sp"
+        android:textColorHint="@color/black"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="40dp"
+        android:drawableStart="@drawable/ic_enter_phone"
+        android:drawablePadding="10dp"
+        android:background="@drawable/et_style"
+        android:backgroundTint="@color/white"
+        android:padding="10dp"
+        android:maxLines="1"
+        android:layout_below="@+id/imgRestaurantLogin"/>
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_your_password_login"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        android:textColorHint="@color/black"
+        android:layout_margin="20dp"
+        android:drawableStart="@drawable/ic_enter_password"
+        android:drawablePadding="10dp"
+        android:background="@drawable/et_style"
+        android:backgroundTint="@color/white"
+        android:padding="10dp"
+        android:maxLines="1"
+        android:layout_below="@+id/edtPhone"/>
+
+    <Button
+        android:id="@+id/btnLogIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtPassword"
+        android:layout_margin="25dp"
+        android:text="Log In"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:background="@color/black"/>
+
+    <TextView
+        android:id="@+id/txtForgetP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forget_password"
+        android:textStyle="bold"
+        android:textSize="19sp"
+        android:textColor="@color/white"
+        android:layout_below="@id/btnLogIn"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/txtRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_yourself"
+        android:textSize="19sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="30dp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

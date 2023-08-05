@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="8">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:layout_weight="0.3"
+        android:padding="6dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="8dp"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimaryDark"/>
+
+    <TextView
+        android:id="@+id/txtCartItemName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5.7"
+        android:text="@string/restaurant_menu"
+        android:textAllCaps="false"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/black"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:padding="6dp"/>
+
+    <TextView
+        android:id="@+id/txtCartPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="@string/rs_100"
+        android:textAllCaps="false"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/black"
+        android:layout_marginHorizontal="8dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:padding="6dp"/>
+
+</LinearLayout>

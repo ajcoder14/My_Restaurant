@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F44336"
+    tools:context=".Activity.RegisterActivity"
+    tools:ignore="ExtraText">
+
+
+
+    <TextView
+        android:id="@+id/txtSingUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sing_Up"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"/>
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_your_name"
+        android:textSize="19sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="20dp"
+        android:inputType="text"
+        android:drawableStart="@drawable/ic_enter_name"
+        android:drawablePadding="10dp"
+        android:background="@drawable/et_style"
+        android:backgroundTint="@color/white"
+        android:padding="10dp"
+        android:maxLines="1"
+        android:autofillHints="emailAddress" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_your_email_address"
+        android:textSize="19sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:inputType="text"
+        android:drawableStart="@drawable/ic_enter_email"
+        android:drawablePadding="10dp"
+        android:background="@drawable/et_style"
+        android:backgroundTint="@color/white"
+        android:padding="10dp"
+        android:maxLines="2"
+        android:autofillHints="emailAddress" />
+
+    <EditText
+        android:id="@+id/edtPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_your_phone_no"
+        android:textSize="19sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:inputType="phone"
+        android:drawableStart="@drawable/ic_enter_phone"
+        android:drawablePadding="10dp"
+        android:background="@drawable/et_style"
+        android:backgroundTint="@color/white"
+        android:padding="10dp"
+        android:maxLines="1"
+        android:autofillHints="Phone"/>
+
+    <EditText
+        android:id="@+id/edtAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your address"
+        android:textSize="19sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:inputType="text"
+        android:drawableStart="@drawable/ic_enter_address"
+        android:drawablePadding="10dp"
+        android:background="@drawable/et_style"
+        android:backgroundTint="@color/white"
+        android:padding="10dp"
+        android:maxLines="2"
+        android:autofillHints="postalAddress" />
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_your_password"
+        android:textSize="19sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:inputType="textPassword"
+        android:drawableStart="@drawable/ic_enter_password"
+        android:drawablePadding="10dp"
+        android:background="@drawable/et_style"
+        android:backgroundTint="@color/white"
+        android:padding="10dp"
+        android:maxLines="1"/>
+
+    <EditText
+        android:id="@+id/edtConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/confirm_password"
+        android:textSize="19sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:inputType="textPassword"
+        android:background="@drawable/et_style"
+        android:backgroundTint="@color/white"
+        android:padding="10dp"
+        android:drawableStart="@drawable/ic_enter_password"
+        android:drawablePadding="10dp"
+        android:maxLines="1"/>
+
+    <Button
+        android:id="@+id/btnSingUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sing_up"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        android:layout_margin="30dp"
+        android:background="@color/black"/>
+
+    <RelativeLayout
+        android:id="@+id/rlRegister"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

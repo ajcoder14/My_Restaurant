@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">My Restaurant</string>
+    <string name="welcome">Welcome..</string>
+    <string name="enter_your_name"> Your name(Min. 3 characters)</string>
+    <string name="enter_your_email_address">Your email address</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_your_password">Password(Min. 4 characters)</string>
+    <string name="enter_your_phone_no">Your Mobile no.(Min. 10 digit)</string>
+    <string name="enter_your_address">Your address</string>
+    <string name="forget_password"><u>Forget Password</u></string>
+    <string name="sing_Up"><u>Sing Up Yourself</u></string>
+    <string name="sing_up">Sing Up</string>
+    <string name="submit">Submit</string>
+    <string name="register_yourself"><u>SingUp here</u></string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="enter_your_mobile_no">Mobile Number</string>
+    <string name="enter_your_password_login">Password</string>
+    <string name="home">Home</string>
+    <string name="my_profile">My Profile</string>
+    <string name="favorite_restaurants">Favorite Restaurants</string>
+    <string name="order_history">Order History</string>
+    <string name="faq">FAQ</string>
+    <string name="log_out">Log Out</string>
+    <string name="_1234567">1234567</string>
+    <string name="my_name">My Name</string>
+    <string name="otp_4_characters">OTP (4 characters)</string>
+    <string name="reset_password"><u>Reset Password</u></string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Users_Data">Users Data</string>
+    <string name="restaurants_name">Restaurants Name</string>
+    <string name="price_person">100</string>
+    <string name="no_any_favourite_restaurant_added">Please add your Favourite Restaurant</string>
+    <string name="chose_from_menu_listed_below">Chose from menu listed below:</string>
+    <string name="your_manu_list">Your manu list</string>
+    <string name="rs">Rs.</string>
+    <string name="_100">100</string>
+    <string name="go_to_cart">Go to cart</string>
+    <string name="restaurant_name_here">Restaurant Name here</string>
+    <string name="ordering_from">Ordering From:</string>
+    <string name="confirm_order">Confirm Order</string>
+    <string name="rs_100">Rs. 100</string>
+    <string name="restaurant_menu">Restaurant menu</string>
+    <string name="your_order_successfully_placed">Your order successfully placed!</string>
+    <string name="yours_previous_orders">Yours previous orders:</string>
+    <string name="you_haven_t_placed_any_order">You haven\'t placed any order..</string>
+    <string name="logout">LogOut</string>
+
+<!--    for FAQ layout file-->
+    <string name="faq_answer_one">A.1 You will be taught using pre-recorded videos and text tutorials. The training has
+        quizzes, assignments, and tests to help you learn better. At the end of the training, you will attempt a project
+        to get hands-on practice of what you learn during your training.
+    </string>
+    <string name="faq_answer_two">A.2 As this is a purely online training program, you can choose to learn at any time
+        of the day. We will recommend a pace to be followed throughout the program, but the actual timings and learning
+        hours can be decided by students according to their convenience.
+    </string>
+    <string name="faq_answer_four">A.4 We recommend spending 10-12 hours per week. However, the actual learning hours
+        can be decided by you as per your convenience.
+    </string>
+    <string name="faq_answer_three">A.3 The training duration is of 6 weeks.</string>
+    <string name="faq_answer_five">A.5 You can choose your preferred batch date while signing up for the training
+        program.
+    </string>
+    <string name="faq_answer_six">A.6 You will be able to download the certificate once you complete your training and
+        take the final test.
+    </string>
+    <string name="filter">Filter</string>
+
+    <array name="filters">
+        <item>Cost(Low to High)</item>
+        <item>Cost(High to Low)</item>
+        <item>Rating</item>
+    </array>
+</resources>

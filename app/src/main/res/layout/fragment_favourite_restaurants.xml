@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HomeFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerFavourite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"/>
+
+    <RelativeLayout
+        android:id="@+id/imgLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+       <ImageView
+           android:id="@+id/imgFavRest"
+           android:layout_width="240dp"
+           android:layout_height="240dp"
+           android:src="@drawable/ic_favourite"
+           android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/txtAddRes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_any_favourite_restaurant_added"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:layout_marginTop="0dp"
+            android:layout_alignBottom="@+id/imgFavRest"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
