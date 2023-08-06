@@ -29,6 +29,7 @@ import com.aniket.myrestaurants.database.OrderEntity
 import com.aniket.myrestaurants.database.RestaurantDatabase
 import com.aniket.myrestaurants.model.FoodItem
 import com.aniket.myrestaurants.util.ConnectionManager
+import com.aniket.myrestaurants.util.DrawerLocker
 import com.google.gson.Gson
 
 class RestaurantDetailsFragment : Fragment() {
@@ -69,7 +70,8 @@ class RestaurantDetailsFragment : Fragment() {
         rlLoading.visibility = View.VISIBLE
         resId = arguments?.getInt("id", 0)
         resName = arguments?.getString("name", "any")
-//        (activity as DrawerLocker).setDrawerEnabled(false)
+        //To lock navigation drawer
+        (activity as DrawerLocker).setDrawerEnabled(false)
         setHasOptionsMenu(true)
         goToCart = view.findViewById(R.id.btnGoToCart)  as Button
         goToCart.visibility = View.GONE

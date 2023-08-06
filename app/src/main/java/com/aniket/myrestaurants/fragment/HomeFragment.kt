@@ -1,5 +1,6 @@
 package com.aniket.myrestaurants.fragment
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.Context
@@ -32,7 +33,7 @@ import com.internshala.foodrunner.util.Sorter
 import java.util.Collections
 
 
-class HomeFragment : Fragment(), DrawerLocker {
+class HomeFragment : Fragment() {
 
     lateinit var recyclerHome: RecyclerView
     lateinit var layoutManager :RecyclerView.LayoutManager
@@ -54,7 +55,8 @@ class HomeFragment : Fragment(), DrawerLocker {
         layoutManager = LinearLayoutManager(activity)
         progressBar = view.findViewById(R.id.progressBar)
         progressLayout = view.findViewById(R.id.progressLayout)
-//        (activity as DrawerLocker).setDrawerEnabled(true)
+
+        (activity as DrawerLocker).setDrawerEnabled(true)
 
         progressLayout.visibility = View.VISIBLE
 
@@ -147,10 +149,12 @@ class HomeFragment : Fragment(), DrawerLocker {
         return (view)
     }
 
+    //for set view on filter
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         activity?.menuInflater?.inflate(R.menu.sorter_menu, menu)
     }
 
+    //for set  click listener on filter
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.actionSort-> showDialog(context as Context)
@@ -159,6 +163,8 @@ class HomeFragment : Fragment(), DrawerLocker {
         return super.onOptionsItemSelected(item)
     }
 
+    //to set alert dialog for filter
+        @SuppressLint("NotifyDataSetChanged")
         private fun showDialog(context: Context){
 
         val builder: androidx.appcompat.app.AlertDialog.Builder? = androidx.appcompat.app.AlertDialog.Builder(context)
@@ -193,10 +199,5 @@ class HomeFragment : Fragment(), DrawerLocker {
             builder?.show()
 
     }
-
-    override fun setDrawerEnabled(enabled: Boolean) {
-        (activity as DrawerLocker).setDrawerEnabled(true)
-    }
-
 
 }
