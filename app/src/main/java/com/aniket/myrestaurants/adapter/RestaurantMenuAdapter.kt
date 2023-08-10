@@ -17,6 +17,7 @@ class RestaurantMenuAdapter(
     OnItemClickListener
 ): RecyclerView.Adapter<RestaurantMenuAdapter.DescriptionViewHolder>() {
 
+    //to show gotoCart button
     companion object {
         var isCartEmpty = true
     }

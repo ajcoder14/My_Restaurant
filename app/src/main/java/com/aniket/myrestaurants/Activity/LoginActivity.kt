@@ -71,6 +71,7 @@ class LoginActivity : AppCompatActivity() {
                         if(Validations().validatePasswordLength(edtPassword.text.toString())){
                             edtPassword.error = null
 
+                            //here we check  internet connection
                             if (ConnectionManager().checkConnectivity(this@LoginActivity)){
                               sendLoginRequest(
                                   edtPhone.text.toString(),

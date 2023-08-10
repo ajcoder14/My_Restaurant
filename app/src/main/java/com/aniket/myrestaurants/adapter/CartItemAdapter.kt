@@ -28,6 +28,7 @@ class CartItemAdapter(private val cartList: ArrayList<FoodItem>, val context: Co
         return cartList.size
     }
 
+    //for return view type for recycler
     override fun getItemViewType(position: Int): Int {
         return position
     }

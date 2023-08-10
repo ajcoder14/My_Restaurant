@@ -35,13 +35,13 @@ import org.json.JSONObject
 
 class CartActivity : AppCompatActivity() {
 
-    lateinit var toolbar : Toolbar
-    lateinit var recyclerCart : RecyclerView
-    lateinit var cartItemAdapter: CartItemAdapter
-    lateinit var rlLoading : RelativeLayout
+    private lateinit var toolbar : Toolbar
+    private lateinit var recyclerCart : RecyclerView
+    private lateinit var cartItemAdapter: CartItemAdapter
+    private lateinit var rlLoading : RelativeLayout
     lateinit var rlCart: RelativeLayout
-    lateinit var txtResName : TextView
-    lateinit var btnPlaceholder: Button
+    private lateinit var txtResName : TextView
+    private lateinit var btnPlaceholder: Button
     lateinit var sharedPreferences: SharedPreferences
     var resId: Int = 0
     var resName: String = "Res"
@@ -78,6 +78,7 @@ class CartActivity : AppCompatActivity() {
 
     }
 
+    //here we fetch list of item from db
     private fun setUpCartList() {
         recyclerCart = findViewById(R.id.recyclerCardItems)
         val dbList = GetItemsFromDBAsync(applicationContext).execute().get()
@@ -156,7 +157,6 @@ class CartActivity : AppCompatActivity() {
             foodArray.put(i, foodId)
         }
         jsonParams.put("food", foodArray)
-//        Log.d("user_id", jsonParams.toString())
 
         val jsonObjectRequest =
             object : JsonObjectRequest(Method.POST, url, jsonParams, Response.Listener {
@@ -184,6 +184,8 @@ class CartActivity : AppCompatActivity() {
                             android.R.style.Theme_Black_NoTitleBar_Fullscreen
                         )
                         dialog.setContentView(R.layout.order_placed_dialog)
+
+                        //By using it we can not disappear dialog page by click anywhere
                         dialog.setCancelable(false)
                         val btnOk = dialog.findViewById<Button>(R.id.btnOk)
                         dialog.show()
@@ -231,7 +233,7 @@ class CartActivity : AppCompatActivity() {
         }
     }
 
-    /*Asynctask class for clearing the recently added items from the database*/
+    /*Async task class for clearing the recently added items from the database*/
     class ClearDBAsync(context: Context, private val resId: String): AsyncTask<Void, Void, Boolean >(){
 
         val db = Room.databaseBuilder(context, RestaurantDatabase::class.java, "res_db").build()

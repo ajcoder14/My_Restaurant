@@ -61,7 +61,10 @@ class FavouriteRecyclerAdapter(val context: Context, val itemList: List<Restaura
         Picasso.get().load(restaurant.restaurantImage).error(R.drawable.restaurant_img)
             .into(p0.imgRestaurant)
 
-        val listOffFavourites = HomeRecyclerAdapter.GetAllFavAsyncTask(context).execute().get()
+        //here we check list of added favourite restaurants in db
+        //
+       // val listOffFavourites = HomeRecyclerAdapter.GetAllFavAsyncTask(context).execute().get()
+        val listOffFavourites = GetAllFavAsyncTask(context).execute().get()
 
         if (listOffFavourites.isNotEmpty() && listOffFavourites.contains(restaurant.restaurant_Id.toString())) {
             p0.imgFavRestaurants.setImageResource(R.drawable.ic_favourite)
@@ -78,15 +81,16 @@ class FavouriteRecyclerAdapter(val context: Context, val itemList: List<Restaura
                 restaurant.restaurantImage
             )
 
-            if (!HomeRecyclerAdapter.DBAsyncTask(context, restaurantEntity, 1).execute().get()) {
-                val async = HomeRecyclerAdapter.DBAsyncTask(context, restaurantEntity, 2).execute()
+            //here we add fav or remove from restaurants
+            if (!DBAsyncTask(context, restaurantEntity, 1).execute().get()) {
+                val async = DBAsyncTask(context, restaurantEntity, 2).execute()
                 val result = async.get()
 
                 if (result) {
                     p0.imgFavRestaurants.setImageResource(R.drawable.ic_favourite)
                 }
             } else {
-                val async = HomeRecyclerAdapter.DBAsyncTask(context, restaurantEntity, 3).execute()
+                val async = DBAsyncTask(context, restaurantEntity, 3).execute()
                 val result = async.get()
 
                 if (result) {

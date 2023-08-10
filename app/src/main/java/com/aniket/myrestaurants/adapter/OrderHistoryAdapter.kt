@@ -1,5 +1,6 @@
 package com.aniket.myrestaurants.adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.service.autofill.FillEventHistory
 import android.view.LayoutInflater
@@ -45,6 +46,8 @@ class OrderHistoryAdapter(val context : Context, private val orderHistoryList : 
         setUpRecycler(holder.recyclerResHistory, orderHistoryObject)
     }
 
+    //here we fetch data from json array and set to order history page
+     @SuppressLint("SuspiciousIndentation")
      private fun setUpRecycler(recyclerResHistory: RecyclerView, orderHistoryList: OrderDetails){
         val foodItemList = ArrayList<FoodItem>()
         for(i in 0 until orderHistoryList.foodItem.length()){
@@ -64,6 +67,7 @@ class OrderHistoryAdapter(val context : Context, private val orderHistoryList : 
         recyclerResHistory.layoutManager = mLayoutManager
     }
 
+    //here we set date format
     private fun formatDate(dateString: String):String? {
         val inputFormatter = SimpleDateFormat("dd-MM-yy HH:mm:ss", Locale.ENGLISH)
         val date : Date = inputFormatter.parse(dateString) as Date

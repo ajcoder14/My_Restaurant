@@ -61,7 +61,7 @@ class ForgetActivity : AppCompatActivity() {
                     etEmail.error = "Invalid Email"
                     Toast.makeText(
                         this@ForgetActivity,
-                        "Invalid Mobile number",
+                        "Invalid email number",
                         Toast.LENGTH_SHORT
                     ).show()
                 }
@@ -87,6 +87,7 @@ class ForgetActivity : AppCompatActivity() {
                     if(success){
                         val firstTry = data.getBoolean("first_try")
                         if(firstTry){
+                            //here we move to reset password page and send mobile no. also
                             val intent = Intent(this@ForgetActivity, ResetPasswordActivity::class.java)
                             intent.putExtra("mobile_number",mobile_no)
                             startActivity(intent)

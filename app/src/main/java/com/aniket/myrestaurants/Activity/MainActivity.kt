@@ -175,6 +175,7 @@ class MainActivity : AppCompatActivity(), DrawerLocker {
             return@setNavigationItemSelectedListener true
         }
 
+        //when we click on our name move to profile
         txtProfileName.setOnClickListener {
             val profileFragment = MyProfileFragment()
             val transaction = supportFragmentManager.beginTransaction()
@@ -188,6 +189,7 @@ class MainActivity : AppCompatActivity(), DrawerLocker {
     }
 
 
+    //for set up hamburger icon
     private fun setupActionBarToggle() {
         actionBarDrawerToggle = object :
             ActionBarDrawerToggle(this, drawerLayout, R.string.open_drawer, R.string.close_drawer) {
