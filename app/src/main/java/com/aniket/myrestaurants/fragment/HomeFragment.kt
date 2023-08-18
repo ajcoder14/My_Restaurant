@@ -29,6 +29,7 @@ import com.aniket.myrestaurants.adapter.HomeRecyclerAdapter
 import com.aniket.myrestaurants.model.Restaurants
 import com.aniket.myrestaurants.util.ConnectionManager
 import com.aniket.myrestaurants.util.DrawerLocker
+import com.facebook.shimmer.ShimmerFrameLayout
 import com.internshala.foodrunner.util.Sorter
 import java.util.Collections
 
@@ -40,6 +41,7 @@ class HomeFragment : Fragment() {
     private lateinit var  recyclerAdapter : HomeRecyclerAdapter
     lateinit var progressLayout : RelativeLayout
     lateinit var progressBar : ProgressBar
+    lateinit var shimmerView : ShimmerFrameLayout
     private var checkedItem: Int = -1
 
     private val restaurantsList = arrayListOf<Restaurants>( )
@@ -53,12 +55,17 @@ class HomeFragment : Fragment() {
 
         recyclerHome = view.findViewById(R.id.recyclerHome)
         layoutManager = LinearLayoutManager(activity)
-        progressBar = view.findViewById(R.id.progressBar)
-        progressLayout = view.findViewById(R.id.progressLayout)
+//        progressBar = view.findViewById(R.id.progressBar)
+//        progressLayout = view.findViewById(R.id.progressLayout)
+
+//        for shimmer animation
+        shimmerView = view.findViewById(R.id.shimmerView)
+
+        shimmerView.visibility = View.VISIBLE
+
+        shimmerView.startShimmerAnimation()
 
         (activity as DrawerLocker).setDrawerEnabled(true)
-
-        progressLayout.visibility = View.VISIBLE
 
         setHasOptionsMenu(true)
 
@@ -71,8 +78,10 @@ class HomeFragment : Fragment() {
                 object : JsonObjectRequest(Request.Method.GET, url, null, Response.Listener {
 
                 try {
-                    progressLayout.visibility = View.GONE
-
+//                    progressLayout.visibility = View.GONE
+                    shimmerView.stopShimmerAnimation()
+                    shimmerView.visibility = View.GONE
+                    recyclerHome.visibility = View.VISIBLE
                     val data = it.getJSONObject("data")
                     val success = data.getBoolean("success")
 

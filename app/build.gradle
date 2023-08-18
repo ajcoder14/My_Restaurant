@@ -47,6 +47,8 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
 
+    //for shimmer animation
+    implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
     //for universal layout
     implementation 'com.intuit.sdp:sdp-android:1.1.0'
     implementation 'com.intuit.ssp:ssp-android:1.1.0'

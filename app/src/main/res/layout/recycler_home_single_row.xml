@@ -47,7 +47,7 @@
                 android:id="@+id/txtPriceSymbol"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Rs. "
+                android:text="Rs."
                 android:textSize="@dimen/_15ssp"
                 android:textColor="#FF5722"
                 android:padding="@dimen/_8sdp"

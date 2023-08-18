@@ -69,6 +69,7 @@
     </string>
     <string name="filter">Filter</string>
 
+<!--    for filter the items-->
     <array name="filters">
         <item>Cost(Low to High)</item>
         <item>Cost(High to Low)</item>
