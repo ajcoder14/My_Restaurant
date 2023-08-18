@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F1E3E3"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="5.2dp"
+    tools:context=".fragment.HomeFragment">
+
+    <LinearLayout
+        android:id="@+id/mainContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:padding="@dimen/_8sdp"
+        android:weightSum="6">
+
+        <ImageView
+            android:id="@+id/imgRestaurants"
+            android:layout_width="0dp"
+            android:layout_weight="1.7"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_margin="@dimen/_2sdp"
+            android:background="#ECE6E6"
+            android:scaleType="centerCrop"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="3.5"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/txtRestaurantsName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ECE6E6"
+                android:padding="@dimen/_8sdp"/>
+
+            <TextView
+                android:id="@+id/txtPriceSymbol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ECE6E6"
+                android:padding="@dimen/_8sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_8sdp"/>
+
+            <TextView
+                android:id="@+id/txtPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ECE6E6"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:paddingLeft="@dimen/_38sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_8sdp"/>
+
+            <TextView
+                android:id="@+id/txtPerPerson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ECE6E6"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:paddingLeft="@dimen/_70sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_8sdp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="#ECE6E6"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:id="@+id/imgFavourite"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp" />
+
+            <TextView
+                android:id="@+id/txtRestaurantRating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgFavourite"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginLeft="@dimen/_10sdp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
